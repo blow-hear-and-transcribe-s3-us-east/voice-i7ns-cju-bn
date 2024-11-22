@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirect Example</title>
+</head>
+<body>
+  <h1>Processing Your Request...</h1>
+  <script>
+    // Function to handle redirects based on the URL path
+    (function handleRedirect() {
+      const path = window.location.pathname; // Get the current path
+      const basePath = "/voice-i7ns-cju-bn"; // Your repository name
+      
+      // Example redirect logic
+      if (path === `${basePath}/custom-path`) {
+        window.location.href = "https://rmhgroups.com/sane/";
+      } else if (path === `${basePath}/special`) {
+        window.location.href = "https://rmhgroups.com/sane/";
+      } else {
+        // Default case: no specific match
+        document.body.innerHTML = `
+          <h1>Welcome to the Default Page</h1>
+          <p>No specific redirect found for this path.</p>
+        `;
+      }
+    })();
+  </script>
+</body>
+</html>
